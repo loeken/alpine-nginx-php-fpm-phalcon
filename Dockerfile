@@ -1,6 +1,6 @@
 FROM php:7.3-fpm AS getsource
 
-FROM alpine-nginx-php-fpm
+FROM loeken/alpine-nginx-php-fpm
 
 ARG PSR_VERSION=1.0.0
 ARG PHALCON_VERSION=3.4.4
