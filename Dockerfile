@@ -16,7 +16,7 @@ ENV PHPIZE_DEPS autoconf dpkg-dev dpkg file g++ gcc libc-dev make pcre-dev pkgco
 
 USER root
 RUN apk add libldap php7-dev php7-ldap $PHPIZE_DEPS
-RUN apk add php7-phalcon php7-yaml
+RUN apk add php7-phalcon php7-yaml composer git
 COPY . /var/www/html
 COPY nginx_conf.d/* /etc/nginx/conf.d/
 WORKDIR /var/www/html
